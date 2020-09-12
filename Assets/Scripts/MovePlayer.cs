@@ -23,6 +23,8 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftShift)) speed *= 2;
+        if (Input.GetKeyUp(KeyCode.LeftShift)) speed /= 2;
         if (Input.GetKey(KeyCode.W))
         {
             var position = GetDirection(transform.rotation.eulerAngles.y - 90) / 10 * speed;
