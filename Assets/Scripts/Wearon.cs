@@ -9,6 +9,12 @@ public class Wearon : MonoBehaviour
     public int RateOfFire = 4; // кол-во выстрелов в секунду
     public int CountShell = 30;
     public int Range = 1000;
+    public ParticleSystem EventOnFire;
+    public Vector3 PlaceEvent;
+    public AudioClip AudioFire;
+    public AudioClip AudioReload;
+    private AudioSource au;
+    
 
     private int realCountShell;
     private float timer = 0;
@@ -19,6 +25,7 @@ public class Wearon : MonoBehaviour
         animator = GetComponent<Animator>();
         realCountShell = CountShell;
         cam = GetComponentInParent<Camera>();
+        au = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,18 +45,24 @@ public class Wearon : MonoBehaviour
         {
             animator.Play("reload");
             realCountShell = CountShell;
+            au.clip = AudioReload;
+            au.Play();
         }
         if (Input.GetMouseButton(0))
             if (fire && realCountShell > 0)
                 Fire();
     }
-
+    
     private void Fire()
     {
         animator.speed = 1;
         animator.Play("fire");
         realCountShell -= 1;
         fire = false;
+        Instantiate(EventOnFire, transform);
+        au.clip = AudioFire;
+        au.Play();
+
         var ray = cam.ScreenPointToRay(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0));
         var info = new RaycastHit();
         if (Physics.Raycast(ray, out info, Range))
