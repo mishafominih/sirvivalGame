@@ -4108,7 +4108,7 @@ MonoBehaviour:
   Range: 1000
   EventOnFire: {fileID: 5128055790517582437, guid: e2fe8f7265f5d824399694730b7098cc,
     type: 3}
-  PlaceEvent: {x: 0.146, y: 1.672, z: 0.812}
+  PlaceEvent: {x: 0, y: 0, z: 0}
   AudioFire: {fileID: 8300000, guid: fe9e235046caba34eb77a2339625cda6, type: 3}
   AudioReload: {fileID: 8300000, guid: 2b6478a7ddf686d4cb811f488f6fbc81, type: 3}
 --- !u!95 &3481176455538223480
