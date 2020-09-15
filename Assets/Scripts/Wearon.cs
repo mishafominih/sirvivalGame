@@ -59,7 +59,7 @@ public class Wearon : MonoBehaviour
         animator.Play("fire");
         realCountShell -= 1;
         fire = false;
-        Instantiate(EventOnFire, transform);
+        Instantiate(EventOnFire, transform).transform.localPosition += PlaceEvent;
         au.clip = AudioFire;
         au.Play();
 
