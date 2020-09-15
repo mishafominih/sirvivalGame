@@ -18,7 +18,6 @@ public class RotatePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.visible = false;
         var x = Input.GetAxis("Mouse X");
         var y = Input.GetAxis("Mouse Y");
         transform.Rotate(0, x * sensitivityX, 0);

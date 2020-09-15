@@ -48,7 +48,7 @@ public class Wearon : MonoBehaviour
             au.clip = AudioReload;
             au.Play();
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !Input.GetKey(KeyCode.I))
             if (fire && realCountShell > 0)
                 Fire();
     }
