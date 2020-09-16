@@ -4103,6 +4103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbf4b1f5aa877048827cb61a62b0743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Item: {fileID: 200204996779526946, guid: 983be3aba3f59de4288b08f0b5227069, type: 3}
   RateOfFire: 8
   CountShell: 30
   Range: 1000

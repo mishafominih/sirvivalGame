@@ -24,7 +24,8 @@ public class TakeItem : MonoBehaviour
             {
                 if(info.collider.tag == "Item")
                 {
-                    inv.items.Add(info.collider.gameObject.GetComponent<Info>());
+                    //доработать
+                    inv.items.Add(info.collider.gameObject.GetComponent<Item>());
                     Destroy(info.collider.gameObject);
                 }
             }

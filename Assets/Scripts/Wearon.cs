@@ -6,6 +6,7 @@ public class Wearon : MonoBehaviour
 {
     Animator animator;
     Camera cam;
+    public GameObject Item;
     public int RateOfFire = 4; // кол-во выстрелов в секунду
     public int CountShell = 30;
     public int Range = 1000;

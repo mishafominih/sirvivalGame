@@ -7,10 +7,10 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Info> items;
+    public List<Item> items = new List<Item>();
     public GameObject image;
     public Canvas canvas;
-    public Transform PlayerTransform;
+    public GameObject Player;
     private List<GameObject> cash;
     void Start()
     {
@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
             foreach (var item in items)
             {
                 var picture = Instantiate(image, canvas.transform);
-                picture.GetComponent<Image>().sprite = item.image;
+                picture.GetComponent<Image>().sprite = item.Image;
                 cash.Add(picture);
             }
             for(int i = 0; i < Math.Min(4, cash.Count / 6 + 1); i++)
@@ -44,7 +44,8 @@ public class Inventory : MonoBehaviour
                 }
         }
         if (Input.GetKey(KeyCode.I))
-            if (Input.GetMouseButton(0))
+        {
+            if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
                 for (int i = 0; i < cash.Count; i++)
                 {
                     var pos = Input.mousePosition;
@@ -52,9 +53,16 @@ public class Inventory : MonoBehaviour
                     if (Math.Abs(pos.x - target.x) <= cash[i].GetComponent<RectTransform>().sizeDelta.x / 2 &&
                         Math.Abs(pos.y - target.y) <= cash[i].GetComponent<RectTransform>().sizeDelta.y / 2)
                     {
-                        InitializeObject(i);
+                        if (Input.GetMouseButtonDown(0))
+                            InitializeObject(i);
+                        if (Input.GetMouseButtonDown(1))
+                        {
+                            items[i] = items[i].UseItem(Player);
+                        }
                     }
                 }
+        }
+
         if (Input.GetKeyUp(KeyCode.I))
         {
             Cursor.visible = false;
@@ -65,11 +73,11 @@ public class Inventory : MonoBehaviour
 
     private void InitializeObject(int i)
     {
-        var a = Instantiate(items[i].prefab,
-            PlayerTransform.position + GetDirection(PlayerTransform.rotation.eulerAngles.y - 90), 
+        var a = Instantiate(items[i].Prefab,
+            Player.transform.position + GetDirection(Player.transform.rotation.eulerAngles.y - 90), 
             new Quaternion());
-        a.GetComponent<Info>().prefab = items[i].prefab;
-        a.GetComponent<Info>().image = items[i].image;
+        a.GetComponent<Item>().Prefab = items[i].Prefab;
+        a.GetComponent<Item>().Image = items[i].Image;
         items.Remove(items[i]);
         Destroy(cash[i]);
         cash.RemoveAt(i);

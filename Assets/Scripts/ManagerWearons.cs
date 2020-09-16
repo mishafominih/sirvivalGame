@@ -35,4 +35,13 @@ public class ManagerWearons : MonoBehaviour
             }
         }
     }
+
+    public GameObject ReplaceWearon(GameObject newWearon)
+    {
+        var res = wearonNow.GetComponent<Wearon>().Item;
+        Destroy(wearonNow);
+        Wearons[index] = newWearon;
+        wearonNow = Instantiate(Wearons[index], cam.transform);
+        return res;
+    }
 }
