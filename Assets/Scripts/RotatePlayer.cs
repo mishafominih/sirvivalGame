@@ -18,6 +18,7 @@ public class RotatePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.I)) return;
         var x = Input.GetAxis("Mouse X");
         var y = Input.GetAxis("Mouse Y");
         transform.Rotate(0, x * sensitivityX, 0);
