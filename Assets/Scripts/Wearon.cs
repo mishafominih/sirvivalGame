@@ -10,6 +10,7 @@ public class Wearon : MonoBehaviour
     public int RateOfFire = 4; // кол-во выстрелов в секунду
     public int CountShell = 30;
     public int Range = 1000;
+    public float Damage;
     public ParticleSystem EventOnFire;
     public Vector3 PlaceEvent;
     public AudioClip AudioFire;
@@ -68,7 +69,10 @@ public class Wearon : MonoBehaviour
         var info = new RaycastHit();
         if (Physics.Raycast(ray, out info, Range))
         {
-            //обработка попадания
+            if(info.collider.gameObject.tag == "target")
+            {
+                info.collider.gameObject.GetComponent<Life>().ChangeHp(Damage);
+            }
         }
     }
 }

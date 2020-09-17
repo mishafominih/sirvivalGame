@@ -5554,6 +5554,7 @@ MonoBehaviour:
   RateOfFire: 4
   CountShell: 30
   Range: 1000
+  Damage: 30
   EventOnFire: {fileID: 5128055790517582437, guid: e2fe8f7265f5d824399694730b7098cc,
     type: 3}
   PlaceEvent: {x: 5.79, y: -6.3, z: 61}
