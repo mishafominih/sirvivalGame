@@ -5,7 +5,7 @@ using UnityEngine;
 public class ManagerWearons : MonoBehaviour
 {
     public List<GameObject> Wearons;
-    private GameObject wearonNow;
+    public GameObject wearonNow;
     private int index = 0;
     Camera cam;
     // Start is called before the first frame update

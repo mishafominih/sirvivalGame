@@ -23,6 +23,20 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(new Vector3(0, 22000, 0));
+        }
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            GetComponent<CapsuleCollider>().height /= 2;
+            speed /= 2;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            GetComponent<CapsuleCollider>().height *= 2;
+            speed *= 2;
+        }
         if (Input.GetKeyDown(KeyCode.LeftShift)) speed *= 2;
         if (Input.GetKeyUp(KeyCode.LeftShift)) speed /= 2;
         if (Input.GetKey(KeyCode.W))
