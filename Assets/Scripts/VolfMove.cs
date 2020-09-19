@@ -9,6 +9,7 @@ public class VolfMove : MonoBehaviour
 	public GameObject target;
 	public float speed = 0.02f;
 	WolfMoveLogic logic;
+	Life life;
     new WolfAnimation animation;
 	
 	
@@ -16,17 +17,21 @@ public class VolfMove : MonoBehaviour
     {
 		logic = GetComponent<WolfMoveLogic>();
 		animation = GetComponent<WolfAnimation>();
+		life = GetComponent<Life>();
 	}
 
     void Update()
-    {
-		logic.Move(target.transform.position);
-		animation.GetAnimation(logic.end);
+	{
+		if (life.Alive && target != null)
+		{
+			logic.Move(target.transform.position);
+			animation.GetAnimation(logic.end);
+		}
     }
 
-    public void OnTriggerEnter(Collider other)
-	{
-		if(other.tag == "Player")
+    private void OnCollisionEnter(Collision collision)
+    {
+		if (collision.collider.tag == "Player")
 		{
 			logic.end = false;
 		}
