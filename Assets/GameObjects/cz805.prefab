@@ -5479,6 +5479,7 @@ GameObject:
   - component: {fileID: 4022668523903797010}
   - component: {fileID: 7115606248634338340}
   - component: {fileID: 8116513990779257612}
+  - component: {fileID: 8231064551656858982}
   m_Layer: 0
   m_Name: cz805
   m_TagString: Untagged
@@ -5656,6 +5657,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &8231064551656858982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7999019302850926715}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8011599, y: 10.229694, z: 3.0816345}
+  m_Center: {x: 0.6149925, y: -30.70141, z: 6.847064}
 --- !u!1 &8040363300336016533
 GameObject:
   m_ObjectHideFlags: 0

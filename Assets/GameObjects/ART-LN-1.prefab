@@ -179,6 +179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7311431876383672240}
+  - component: {fileID: 1352331587355164677}
   m_Layer: 0
   m_Name: ART-LN-1
   m_TagString: Untagged
@@ -203,6 +204,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
+--- !u!65 &1352331587355164677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993223843861755299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.036810875, y: 0.023773437, z: 0.6741981}
+  m_Center: {x: -0.00000047683716, y: -0.00078857504, z: -0.0037884116}
 --- !u!1 &8761276234512827816
 GameObject:
   m_ObjectHideFlags: 0

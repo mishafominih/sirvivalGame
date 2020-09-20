@@ -4057,6 +4057,7 @@ GameObject:
   - component: {fileID: 4877672632749328013}
   - component: {fileID: 3481176455538223480}
   - component: {fileID: 9077078233803844357}
+  - component: {fileID: 9003896703436590457}
   m_Layer: 0
   m_Name: ak-74
   m_TagString: Untagged
@@ -4228,6 +4229,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &9003896703436590457
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538680063853426193}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.10166146, z: 0.80313826}
+  m_Center: {x: -1.14716237e-10, y: 1.6741695, z: 0.39487156}
 --- !u!1 &7567184093453434745
 GameObject:
   m_ObjectHideFlags: 0
