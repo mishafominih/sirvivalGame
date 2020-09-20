@@ -39,25 +39,23 @@ public class MovePlayer : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift)) speed *= 2;
         if (Input.GetKeyUp(KeyCode.LeftShift)) speed /= 2;
+        var position = new Vector3();
         if (Input.GetKey(KeyCode.W))
         {
-            var position = GetDirection(transform.rotation.eulerAngles.y - 90) / 10 * speed;
-            rb.MovePosition(position + transform.position);
+            position += GetDirection(transform.rotation.eulerAngles.y - 90) / 10;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            var position = GetDirection(transform.rotation.eulerAngles.y) / 10 * speed;
-            rb.MovePosition(position + transform.position);
+            position += GetDirection(transform.rotation.eulerAngles.y) / 10;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            var position = GetDirection(transform.rotation.eulerAngles.y + 90) / 10 * speed;
-            rb.MovePosition(position + transform.position);
+            position += GetDirection(transform.rotation.eulerAngles.y + 90) / 10;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            var position = GetDirection(transform.rotation.eulerAngles.y + 180) / 10 * speed;
-            rb.MovePosition(position + transform.position);
+            position += GetDirection(transform.rotation.eulerAngles.y + 180) / 10;
         }
+        rb.MovePosition(position * speed + transform.position);
     }
 }

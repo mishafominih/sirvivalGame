@@ -24,9 +24,13 @@ public class TakeItem : MonoBehaviour
             {
                 if(info.collider.tag == "Item")
                 {
-                    //доработать
                     inv.items.Add(info.collider.gameObject.GetComponent<Item>());
                     Destroy(info.collider.gameObject);
+                }
+                if (info.collider.tag == "Door")
+                {
+                    var o = info.collider.gameObject.GetComponent<OpenDoor>();
+                    o.OpenOrClose();
                 }
             }
         }
