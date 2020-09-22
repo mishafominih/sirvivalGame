@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2059395553057842751, guid: ad2e60c194fdc0045876fa94880bce21, type: 3}
+  text: {fileID: 7974208326178228577, guid: 43905276b6d42af41905539f3d5e38be, type: 3}
   canvas: {fileID: 0}
   Player: {fileID: 3608764589254297305}
 --- !u!1 &3608764589254297305

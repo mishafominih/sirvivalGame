@@ -64,6 +64,9 @@ public class ManagerWearons : MonoBehaviour
     public GameObject ReplaceWearon(GameObject newWearon)
     {
         var res = wearonNow == null ? null : wearonNow.GetComponent<Wearon>().Item;
+        if (res != null) AddPatrons(
+              wearonNow.GetComponent<Wearon>().patronType,
+              wearonNow.GetComponent<Wearon>().realCountShell);
         Destroy(wearonNow);
         Wearons[index] = newWearon;
         wearonNow = Instantiate(Wearons[index], cam.transform);

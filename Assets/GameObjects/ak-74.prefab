@@ -4107,13 +4107,15 @@ MonoBehaviour:
   Item: {fileID: 200204996779526946, guid: 983be3aba3f59de4288b08f0b5227069, type: 3}
   RateOfFire: 8
   CountShell: 30
-  Range: 1000
+  Distance: 1000
+  patronType: 0
   Damage: 15
   EventOnFire: {fileID: 5128055790517582437, guid: e2fe8f7265f5d824399694730b7098cc,
     type: 3}
   PlaceEvent: {x: 0, y: 0, z: 0}
   AudioFire: {fileID: 8300000, guid: fe9e235046caba34eb77a2339625cda6, type: 3}
   AudioReload: {fileID: 8300000, guid: 2b6478a7ddf686d4cb811f488f6fbc81, type: 3}
+  realCountShell: 0
 --- !u!95 &3481176455538223480
 Animator:
   serializedVersion: 3
@@ -4143,7 +4145,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fe9e235046caba34eb77a2339625cda6, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

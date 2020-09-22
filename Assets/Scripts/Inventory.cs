@@ -9,13 +9,16 @@ public class Inventory : MonoBehaviour
 {
     public List<Item> items = new List<Item>();
     public GameObject image;
+    public GameObject text;
     public Canvas canvas;
     public GameObject Player;
     private List<GameObject> cash;
+    private ManagerWearons mW;
     void Start()
     {
         Cursor.visible = false;
         cash = new List<GameObject>();
+        mW = GetComponentInParent<ManagerWearons>();
     }
 
     private Vector3 GetDirection(float angle)
@@ -28,20 +31,9 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && items.Count > 0)
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            Cursor.visible = true;
-            foreach (var item in items)
-            {
-                var picture = Instantiate(image, canvas.transform);
-                picture.GetComponent<Image>().sprite = item.Image;
-                cash.Add(picture);
-            }
-            for(int i = 0; i < Math.Min(4, cash.Count / 6 + 1); i++)
-                for(int j = 0; j < Math.Min(6, cash.Count - i * 6); j++)
-                {
-                    cash[i * 6 + j].transform.position = new Vector3(50 + j * 100, 350 - i * 100, 0);
-                }
+            Drow();
         }
         if (Input.GetKey(KeyCode.I))
         {
@@ -70,6 +62,36 @@ public class Inventory : MonoBehaviour
             Cursor.visible = false;
             foreach (var c in cash) Destroy(c);
             cash.Clear();
+        }
+    }
+
+    private void Drow()
+    {
+        Cursor.visible = true;
+        if (items.Count > 0)
+        {
+            foreach (var item in items)
+            {
+                var picture = Instantiate(image, canvas.transform);
+                picture.GetComponent<Image>().sprite = item.Image;
+                cash.Add(picture);
+            }
+            for (int i = 0; i < Math.Min(4, cash.Count / 6 + 1); i++)
+                for (int j = 0; j < Math.Min(6, cash.Count - i * 6); j++)
+                {
+                    cash[i * 6 + j].transform.position = new Vector3(50 + j * 100, 350 - i * 100, 0);
+                }
+        }
+        int height = 1;
+        foreach (var tuple in mW.Patrons)
+        {
+            var t = Instantiate(text, canvas.transform);
+            Text text1 = t.GetComponent<Text>();
+            text1.text = tuple.Key.ToString() + ": " + tuple.Value.ToString();
+            t.transform.position = new Vector3(Screen.width - 100, height++ * 50);
+            text1.fontSize = 35;
+            text1.color = Color.white;
+            cash.Add(t);
         }
     }
 

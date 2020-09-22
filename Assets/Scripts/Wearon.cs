@@ -48,12 +48,11 @@ public class Wearon : MonoBehaviour
         animator.speed = 1;
         if (Input.GetKey(KeyCode.R) && realCountShell < CountShell)
         {
-            mW.AddPatrons(patronType, realCountShell);
-            var count = mW.GetPatrons(patronType, CountShell);
+            var count = mW.GetPatrons(patronType, CountShell - realCountShell);
             if (count > 0)
             {
                 animator.Play("reload");
-                realCountShell = count;
+                realCountShell += count;
                 au.clip = AudioReload;
                 au.Play();
             }
