@@ -593,6 +593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 0.05
+  Distance: 15
 --- !u!114 &2312775778390680409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,6 +606,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7ed7d2678ee3d4baf9f5c9c1996c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: 2
+  end: 4
 --- !u!114 &8341286790276588946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,6 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   end: 0
+  Attack: 0
 --- !u!95 &2926881324369988357
 Animator:
   serializedVersion: 3
@@ -651,7 +655,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &4807945736127307118
 CapsuleCollider:
@@ -680,6 +684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  Alive: 0
+  TimeDestroy: 10
 --- !u!1 &2926881324362709185
 GameObject:
   m_ObjectHideFlags: 0

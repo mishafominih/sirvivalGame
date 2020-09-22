@@ -20,17 +20,29 @@ public class TakeItem : MonoBehaviour
         {
             var ray = cam.ScreenPointToRay(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0));
             var info = new RaycastHit();
-            if (Physics.Raycast(ray, out info, 2))
+            if (Physics.Raycast(ray, out info, 3))
             {
                 if(info.collider.tag == "Item")
                 {
-                    inv.items.Add(info.collider.gameObject.GetComponent<Item>());
+                    Item item = info.collider.gameObject.GetComponent<Item>();
+                    inv.items.Add(item);
+                    if(item is UseWearon)
+                    {
+                        var w = ((UseWearon)item).Wearon.GetComponent<Wearon>();
+                        GetComponentInParent<ManagerWearons>().AddPatrons(w.patronType, w.CountShell);
+                    }
                     Destroy(info.collider.gameObject);
                 }
                 if (info.collider.tag == "Door")
                 {
                     var o = info.collider.gameObject.GetComponent<OpenDoor>();
                     o.OpenOrClose();
+                }
+                if (info.collider.tag == "Patrons")
+                {
+                    var p = info.collider.gameObject.GetComponent<Patrons>();
+                    GetComponentInParent<ManagerWearons>().AddPatrons(p.Type, p.Count);
+                    Destroy(info.collider.gameObject);
                 }
             }
         }

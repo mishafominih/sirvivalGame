@@ -8,10 +8,15 @@ public class VolfMove : MonoBehaviour
 {
 	public GameObject target;
 	public float speed = 0.02f;
+	public float Distance = 15;
 	WolfMoveLogic logic;
 	Life life;
     new WolfAnimation animation;
 	
+	private bool GetDistanceToTarget()
+    {
+		return Vector3.Distance(transform.position, target.transform.position) <= Distance ? true : false;
+    }
 	
 	void Start()
     {
@@ -22,18 +27,14 @@ public class VolfMove : MonoBehaviour
 
     void Update()
 	{
-		if (life.Alive && target != null)
+		if (target != null)
 		{
-			logic.Move(target.transform.position);
-			animation.GetAnimation(logic.end);
+			if (!GetDistanceToTarget()) logic.end = false;
+			if (life.Alive && GetDistanceToTarget())
+			{
+				logic.Move(target.transform.position);
+				animation.GetAnimation(logic.end, logic.Attack);
+			}
 		}
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-		if (collision.collider.tag == "Player")
-		{
-			logic.end = false;
-		}
-	}
 }

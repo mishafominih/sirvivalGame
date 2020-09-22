@@ -17,7 +17,8 @@ public class UseWearon : MonoBehaviour, Item
 
     public Item UseItem(GameObject player)
     {
-        return player.GetComponent<ManagerWearons>().ReplaceWearon(Wearon).GetComponent<Item>();
+        GameObject go = player.GetComponent<ManagerWearons>().ReplaceWearon(Wearon);
+        return go == null ? null : go.GetComponent<Item>();
     }
 
     // Start is called before the first frame update

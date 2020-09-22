@@ -57,7 +57,9 @@ public class Inventory : MonoBehaviour
                             InitializeObject(i);
                         if (Input.GetMouseButtonDown(1))
                         {
-                            items[i] = items[i].UseItem(Player);
+                            var item = items[i].UseItem(Player);
+                            if (item != null) items[i] = item;
+                            else items.RemoveAt(i);
                         }
                     }
                 }

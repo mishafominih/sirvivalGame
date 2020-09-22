@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 2112396147995412276}
   - component: {fileID: 5325421514817083158}
   m_Layer: 0
-  m_Name: SEDUCTION libreria_bookcase 203x146
+  m_Name: "\u043F\u043E\u043B\u043A\u0430"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,8 +303,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.4732218, y: 0.35561553, z: 2.0259912}
-  m_Center: {x: 0.01510191, y: 0.0000003799796, z: -0.01005888}
+  m_Size: {x: 1.4732218, y: 0.19791411, z: 2.0259912}
+  m_Center: {x: 0.01510191, y: 0.07885112, z: -0.01005888}
 --- !u!1 &6718761515011985094
 GameObject:
   m_ObjectHideFlags: 0

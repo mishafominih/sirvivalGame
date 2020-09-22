@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 2059395553057842751, guid: ad2e60c194fdc0045876fa94880bce21, type: 3}
   canvas: {fileID: 0}
-  Player: {fileID: 0}
+  Player: {fileID: 3608764589254297305}
 --- !u!1 &3608764589254297305
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,9 +60,10 @@ GameObject:
   - component: {fileID: 3608764589254297300}
   - component: {fileID: 3608764589254297302}
   - component: {fileID: 5622856179685089663}
+  - component: {fileID: 1188230492}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +153,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce843d345809b44b9162e5737b92bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1188230492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3608764589254297305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b804460b22f0c549a0cceef1ed8089e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wearons:
+  - {fileID: 1095324869261319559, guid: a845ad2c02dd6e343a34ae0f5f420351, type: 3}
+  wearonNow: {fileID: 0}
 --- !u!1 &8009529815494817503
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c73bded965c91b4a942753e8a15a902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AppRoach: 15
 --- !u!20 &309086339880109883
 Camera:
   m_ObjectHideFlags: 0
