@@ -9,6 +9,7 @@ TagManager:
   - Item
   - Door
   - Patrons
+  - Light
   layers:
   - Default
   - TransparentFX

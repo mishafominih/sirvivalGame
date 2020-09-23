@@ -44,6 +44,11 @@ public class TakeItem : MonoBehaviour
                     GetComponentInParent<ManagerWearons>().AddPatrons(p.Type, p.Count);
                     Destroy(info.collider.gameObject);
                 }
+                if (info.collider.tag == "Light")
+                {
+                    GetComponentInChildren<UseLight>().use = true;
+                    Destroy(info.collider.gameObject);
+                }
             }
         }
     }
