@@ -40,4 +40,10 @@ public class Life : MonoBehaviour
     {
         life -= delta;
     }
+
+    public void AddHp(float delta)
+    {
+        life += delta;
+        if (life > 100) life = 100;
+    }
 }
