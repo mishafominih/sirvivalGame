@@ -1394,8 +1394,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  InstatiateTime: 2.8
   speed: 0.03
-  Distance: 15
+  Distance: 45
 --- !u!1 &6765824911349110187
 GameObject:
   m_ObjectHideFlags: 0

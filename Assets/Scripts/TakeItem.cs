@@ -49,6 +49,15 @@ public class TakeItem : MonoBehaviour
                     GetComponentInChildren<UseLight>().use = true;
                     Destroy(info.collider.gameObject);
                 }
+                if (info.collider.tag == "Generator")
+                {
+                    info.collider.gameObject.GetComponent<ListLight>().Lights
+                        .ForEach(l =>
+                        {
+                            l.GetComponentInChildren<LightGanerator>().on = true;
+                            l.GetComponentInChildren<LightGanerator>().SetLight();
+                        });
+                }
             }
         }
     }

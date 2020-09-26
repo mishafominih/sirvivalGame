@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/prolog.unity
     guid: 459c47004d62b584cb1ccc35e5d45cc9
   - enabled: 1
     path: Assets/Scenes/1lvl.unity
     guid: 7c53fac75b607b4458381dd7e81df4cc
+  - enabled: 1
+    path: Assets/Scenes/2lvl.unity
+    guid: 7b3cef7613f1d7a4bb23965b0debeb34
   m_configObjects: {}

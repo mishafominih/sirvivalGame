@@ -23,21 +23,18 @@ public class WolfMoveLogic : MonoBehaviour
 		Attack = false;
 		float deltaX = target.x - transform.position.x;
 		float deltaZ = target.z - transform.position.z;
+		float angle = Mathf.Atan2(deltaZ, deltaX);
+		rb.rotation = Quaternion.Euler(rb.rotation.x, 90 - angle * 180 / Mathf.PI, 0);
 		if (Vector3.Distance(target, transform.position) >= 2)
 		{
 			if (end != true)
 			{
-				float angle = Mathf.Atan2(deltaZ, deltaX);
-				//if (Rotate)
-				rb.rotation = Quaternion.Euler(rb.rotation.x, 90 - angle * 180 / Mathf.PI, 0);
 				rb.MovePosition(transform.position + new Vector3(volf.speed * Mathf.Cos(angle), 0,
 					volf.speed * Mathf.Sin(angle)));
-				//Rotate = false;
 			}
 		}
 		else
 		{
-			//Rotate = true;
 			Attack = true;
 		}
 	}

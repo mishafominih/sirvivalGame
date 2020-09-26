@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4817544543941126127}
   - component: {fileID: 6625198867838602354}
+  - component: {fileID: 3425109499235408581}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4495526694302879350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 0.295}
+  m_LocalPosition: {x: 0, y: -0, z: 0.373}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7311431876383672240}
@@ -91,6 +92,19 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &3425109499235408581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495526694302879350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6e505d24db1a14fbcb7c773571ef08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 1
 --- !u!1 &5592251772466609618
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5993223843861755299}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -18.872995, y: 0.3349993, z: 4.117031}
+  m_LocalPosition: {x: -18.872995, y: 0.36, z: 4.117031}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 6478722477732937391}

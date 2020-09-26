@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Patrons
   - Light
+  - Generator
   layers:
   - Default
   - TransparentFX

@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed: 0.04
-  Distance: 15
+  Distance: 45
 --- !u!114 &1841057649952610229
 MonoBehaviour:
   m_ObjectHideFlags: 0
