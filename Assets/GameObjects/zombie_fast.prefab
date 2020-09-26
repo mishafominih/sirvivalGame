@@ -1410,8 +1410,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  InstatiateTime: 3
   speed: 0.04
   Distance: 45
+  FirstAttackTime: 0.5
+  AttackTime: 1.8
+  Damage: 10
 --- !u!114 &1841057649952610229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1431,7 @@ MonoBehaviour:
   hp: 100
   Alive: 0
   TimeDestroy: 2
+  scr: {fileID: 0}
 --- !u!1 &6761784234208251917
 GameObject:
   m_ObjectHideFlags: 0

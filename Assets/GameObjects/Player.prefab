@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 3608764589254297302}
   - component: {fileID: 5622856179685089663}
   - component: {fileID: 1188230492}
+  - component: {fileID: 3496262406599414133}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -274,6 +275,22 @@ MonoBehaviour:
   Wearons:
   - {fileID: 1095324869261319559, guid: a845ad2c02dd6e343a34ae0f5f420351, type: 3}
   wearonNow: {fileID: 0}
+--- !u!114 &3496262406599414133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3608764589254297305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47762bb8750e218499b2afac54f2bea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  Alive: 1
+  TimeDestroy: 1
+  scr: {fileID: 0}
 --- !u!1 &8009529815494817503
 GameObject:
   m_ObjectHideFlags: 0

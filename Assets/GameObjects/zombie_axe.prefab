@@ -1755,6 +1755,9 @@ MonoBehaviour:
   InstatiateTime: 2.8
   speed: 0.02
   Distance: 45
+  FirstAttackTime: 1.7
+  AttackTime: 2.2
+  Damage: 10
 --- !u!114 &1005609749829258147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,6 +1773,7 @@ MonoBehaviour:
   hp: 100
   Alive: 0
   TimeDestroy: 4
+  scr: {fileID: 0}
 --- !u!136 &3206646907584314267
 CapsuleCollider:
   m_ObjectHideFlags: 0

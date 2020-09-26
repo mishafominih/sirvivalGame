@@ -1353,6 +1353,7 @@ MonoBehaviour:
   hp: 100
   Alive: 0
   TimeDestroy: 3
+  scr: {fileID: 0}
 --- !u!114 &6267152136627219373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1398,9 @@ MonoBehaviour:
   InstatiateTime: 2.8
   speed: 0.02
   Distance: 45
+  FirstAttackTime: 1
+  AttackTime: 1.7
+  Damage: 10
 --- !u!1 &6907199412231828137
 GameObject:
   m_ObjectHideFlags: 0
