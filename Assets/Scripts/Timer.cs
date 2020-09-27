@@ -11,6 +11,11 @@ public class Timer : MonoBehaviour
         this.time = time;
     }
 
+    public float GetTime()
+    {
+        return timer > time ? time : timer;
+    }
+
     public bool Check()
     {
         if(timer > time)
