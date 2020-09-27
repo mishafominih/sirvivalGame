@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Open : MonoBehaviour
 {
     public int next;
+    public Vector3 NextPosition;
     public GameObject g;
     // Update is called once per frame
 
@@ -13,8 +14,11 @@ public class Open : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.F) && g.GetComponentInChildren<LightGanerator>().on) 
+            if (Input.GetKey(KeyCode.F) && g.GetComponentInChildren<LightGanerator>().on)
+            {
                 SceneManager.LoadScene(next);
+                GameObject.FindGameObjectWithTag("Player").transform.position = NextPosition;
+            }
         }
     }
 }
