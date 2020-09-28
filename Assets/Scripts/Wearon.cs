@@ -20,6 +20,7 @@ public class Wearon : MonoBehaviour
     public AudioClip AudioFire;
     public AudioClip AudioReload;
     public int realCountShell;
+    
 
     #region Spread
     public float StartSpread;
@@ -28,6 +29,7 @@ public class Wearon : MonoBehaviour
     public float normalize = 3;
     #endregion
 
+    private Timer ReloadTime;
     private AudioSource au;
     private ManagerWearons mW;
     private Timer t;
@@ -47,6 +49,7 @@ public class Wearon : MonoBehaviour
             new List<string> { "left", "right", "up", "down"}
             .Select(x => mW.gameObject.GetComponentInChildren<Inventory>().canvas.transform.Find(x).gameObject)
             .ToArray(), normalize);
+        ReloadTime = new Timer(AudioReload.length);
     }
 
     // Update is called once per frame
@@ -57,6 +60,7 @@ public class Wearon : MonoBehaviour
         animator.speed = 1;
         if (Input.GetKey(KeyCode.R) && realCountShell < CountShell)
         {
+            ReloadTime.Null();
             var count = mW.GetPatrons(patronType, CountShell - realCountShell);
             if (count > 0)
             {
@@ -66,7 +70,7 @@ public class Wearon : MonoBehaviour
                 au.Play();
             }
         }
-        if (Input.GetMouseButton(0) && !Input.GetKey(KeyCode.I))
+        if (ReloadTime.Check() && Input.GetMouseButton(0) && !Input.GetKey(KeyCode.I))
             if (fire && realCountShell > 0)
                 Fire();
     }

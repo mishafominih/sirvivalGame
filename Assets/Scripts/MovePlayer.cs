@@ -7,10 +7,12 @@ public class MovePlayer : MonoBehaviour
     public float speed = 1;
     Rigidbody rb;
     Camera cam;
+    private Timer timer;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         cam = GetComponentInChildren<Camera>();
+        timer = new Timer(0.9f);
     }
 
     private Vector3 GetDirection(float angle)
@@ -23,9 +25,10 @@ public class MovePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (timer.Check() && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(new Vector3(0, 22000, 0));
+            timer.Null();
         }
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {

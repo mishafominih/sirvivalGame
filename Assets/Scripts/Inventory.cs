@@ -45,9 +45,9 @@ public class Inventory : MonoBehaviour
                     if (Math.Abs(pos.x - target.x) <= cash[i].GetComponent<RectTransform>().sizeDelta.x / 2 &&
                         Math.Abs(pos.y - target.y) <= cash[i].GetComponent<RectTransform>().sizeDelta.y / 2)
                     {
-                        if (Input.GetMouseButtonDown(0))
-                            InitializeObject(i);
                         if (Input.GetMouseButtonDown(1))
+                            InitializeObject(i);
+                        if (Input.GetMouseButtonDown(0))
                         {
                             var item = items[i].UseItem(Player);
                             if (item != null) items[i] = item;
