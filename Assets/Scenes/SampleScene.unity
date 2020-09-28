@@ -1205,6 +1205,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3608764589765318415}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1308002386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308002376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0565a78c8aa6e9e498da1fab439be7c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 2088197415773654375, guid: be937c9bd96f08443964afba2aea8cfc, type: 3}
 --- !u!1001 &1404316012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1931,7 +1944,7 @@ PrefabInstance:
     - target: {fileID: 1188230492, guid: 0b43328adbd152c48a38ea078b4f2a96, type: 3}
       propertyPath: Wearons.Array.data[0]
       value: 
-      objectReference: {fileID: 7999019302850926715, guid: 4cf5cecd492b7454c9a1235a44499420,
+      objectReference: {fileID: 7538680063853426193, guid: d02ac67046138ec478cf36d2d101d57c,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b43328adbd152c48a38ea078b4f2a96, type: 3}

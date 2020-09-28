@@ -57,6 +57,7 @@ public class TakeItem : MonoBehaviour
                             l.GetComponentInChildren<LightGanerator>().on = true;
                             l.GetComponentInChildren<LightGanerator>().SetLight();
                         });
+                    gameObject.GetComponent<Tasks>().SetTask("Найти выход");
                 }
             }
         }

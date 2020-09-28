@@ -40,8 +40,8 @@ public class MovePlayer : MonoBehaviour
             GetComponent<CapsuleCollider>().height *= 2;
             speed *= 2;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift)) speed *= 2;
-        if (Input.GetKeyUp(KeyCode.LeftShift)) speed /= 2;
+        if (Input.GetKeyDown(KeyCode.LeftShift)) speed *= 1.7f;
+        if (Input.GetKeyUp(KeyCode.LeftShift)) speed /= 1.7f;
         var position = new Vector3();
         if (Input.GetKey(KeyCode.W))
         {
