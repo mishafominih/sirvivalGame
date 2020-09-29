@@ -28,10 +28,10 @@ public class Spawn : MonoBehaviour
 
     private void Update()
     {
+        real = real.Where(x => x != null).ToList();
         if (start && counter < count)
         {
-            real = real.Where(x => x != null).ToList();
-            for(int i = 0; i < RealCount - real.Count; i++)
+            for (int i = 0; i < RealCount - real.Count; i++)
             {
                 var g = Instantiate(Enemyes[Random.Range(0, Enemyes.Count)],
                     getRandVector(), new Quaternion());
@@ -39,6 +39,15 @@ public class Spawn : MonoBehaviour
                 real.Add(g);
                 counter++;
             }
+        }
+        if(counter >= count && real.Count == 0)
+        {
+            Doors.ForEach(x =>
+            {
+                x.GetComponent<OpenDoor>().Open();
+                x.GetComponent<OpenDoor>().can = true;
+            });
+            Destroy(this);
         }
     }
 
@@ -49,7 +58,7 @@ public class Spawn : MonoBehaviour
             start = true;
             Doors.ForEach(x =>
             {
-                x.GetComponent<OpenDoor>().OpenOrClose();
+                x.GetComponent<OpenDoor>().Close();
                 x.GetComponent<OpenDoor>().can = false;
             });
             player = other.gameObject;
