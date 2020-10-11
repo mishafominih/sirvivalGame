@@ -27,7 +27,7 @@ public class MovePlayer : MonoBehaviour
     {
         if (timer.Check() && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(new Vector3(0, 22000, 0));
+            rb.AddForce(new Vector3(0, 20000, 0));
             timer.Null();
         }
         if (Input.GetKeyDown(KeyCode.LeftControl))
