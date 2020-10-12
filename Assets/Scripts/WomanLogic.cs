@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WomanLogic : MonoBehaviour
 {
-    private bool fear = true;
+    public bool fear = true;
     Rigidbody rb;
     Animator animator;
     void Start()
@@ -19,6 +19,11 @@ public class WomanLogic : MonoBehaviour
         {
             animator.Play("Sit");
             animator.speed = 0.25f;
+        }
+        else
+        {
+            animator.Play("Stay");
+            animator.speed = 1f;
         }
     }
 }

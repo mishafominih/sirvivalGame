@@ -1057,6 +1057,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5186822841124141945, guid: cb60d4b5ccf490040bca7783e74255c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb60d4b5ccf490040bca7783e74255c3, type: 3}
 --- !u!1 &98760481 stripped
@@ -1174,6 +1179,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.17998126, y: 0.04766309, z: 0.10751316}
   m_Center: {x: -0.015693706, y: -0.020758875, z: 0.042406}
+--- !u!114 &98760484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98760481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63f710bbb065c76478f0c174be2c2c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audios:
+  - {fileID: 8300000, guid: 4d4d4bb9c7d15d446998057900b0012f, type: 3}
+  - {fileID: 8300000, guid: 19c42f441422e6d489c11ef05065996f, type: 3}
+  - {fileID: 8300000, guid: daefe150029a7c747a40bfddf285ea4c, type: 3}
+  - {fileID: 8300000, guid: a0f783899b0d6294883365142886ff68, type: 3}
+  - {fileID: 8300000, guid: e87a0d2150c249448801c1df70c82360, type: 3}
+--- !u!114 &98760490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98760481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7fd76bf1fe06124697aa96211059cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &103958740
 PrefabInstance:
   m_ObjectHideFlags: 0
