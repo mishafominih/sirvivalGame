@@ -11,6 +11,7 @@ TagManager:
   - Patrons
   - Light
   - Generator
+  - soldier
   layers:
   - Default
   - TransparentFX

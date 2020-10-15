@@ -97,6 +97,14 @@ public class Wearon : MonoBehaviour
             {
                 info.collider.gameObject.GetComponent<Life>().ChangeHp(Damage);
             }
+            if (info.transform.gameObject.tag == "soldier")
+            {
+                info.transform.GetComponent<WarLogic>().ChangeHp(Damage);
+            }
+            else
+            {
+
+            }
         }
     }
 }

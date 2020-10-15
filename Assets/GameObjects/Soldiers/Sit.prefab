@@ -1311,7 +1311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2645045035383021415}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5.6, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1308031620216471041}
@@ -1330,7 +1330,7 @@ Animator:
   m_GameObject: {fileID: 2645045035383021415}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1b5a5efa9f1352749923538e0729c2ee, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1442d19225a8ee498b7353e7400b15d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3008,6 +3008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8373691274920537382}
+  - component: {fileID: 3445010299606626758}
   m_Layer: 0
   m_Name: Gag_Alone_Hut_StartIdle_Mother
   m_TagString: Untagged
@@ -3032,6 +3033,20 @@ Transform:
   m_Father: {fileID: 1364115332922125684}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3445010299606626758
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077185938751181569}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.38701653
+  m_Height: 1.1814773
+  m_Direction: 1
+  m_Center: {x: -0.112983465, y: 0.56554604, z: -7.978604e-11}
 --- !u!1 &7102213765199807142
 GameObject:
   m_ObjectHideFlags: 0
