@@ -5551,6 +5551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbf4b1f5aa877048827cb61a62b0743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Patron: {fileID: 332526131794881531, guid: 67e7b61cfb6fb754f94a3ce6aacb2279, type: 3}
   Item: {fileID: 8748813070496366233, guid: 9f61d550efd61794287ec71188543211, type: 3}
   RateOfFire: 4
   CountShell: 30

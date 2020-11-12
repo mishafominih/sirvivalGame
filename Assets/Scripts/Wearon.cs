@@ -7,8 +7,7 @@ using UnityEngine.UI;
 
 public class Wearon : MonoBehaviour
 {
-    Animator animator;
-    Camera cam;
+    public GameObject Patron;
     public GameObject Item;
     public int RateOfFire = 4; // кол-во выстрелов в секунду
     public int CountShell = 30;//патрон в магазине
@@ -29,6 +28,8 @@ public class Wearon : MonoBehaviour
     public float normalize = 3;
     #endregion
 
+    private Animator animator;
+    private Camera cam;
     private Timer ReloadTime;
     private AudioSource au;
     private ManagerWearons mW;
@@ -91,20 +92,13 @@ public class Wearon : MonoBehaviour
             Screen.height * 0.5f + spread.GetDiapazon(), 
             0));
         var info = new RaycastHit();
-        if (Physics.Raycast(ray, out info, Distance))
-        {
-            if (info.collider.gameObject.tag == "target")
-            {
-                info.collider.gameObject.GetComponent<Life>().ChangeHp(Damage);
-            }
-            if (info.transform.gameObject.tag == "soldier")
-            {
-                info.transform.GetComponent<WarLogic>().ChangeHp(Damage);
-            }
-            else
-            {
 
-            }
-        }
+        var p = Instantiate(Patron, cam.transform);
+        //p.transform.localPosition += PlaceEvent;
+        p.transform.SetParent(null);
+        p.transform.position += ray.direction.normalized * 2;
+        p.transform.rotation = transform.rotation;
+        p.GetComponent<PatronSkript>().Damage = Damage;
+        p.GetComponent<Rigidbody>().AddForce(ray.direction.normalized * 500);
     }
 }

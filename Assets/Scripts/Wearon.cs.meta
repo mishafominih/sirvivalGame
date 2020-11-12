@@ -3,7 +3,12 @@ guid: 8fbf4b1f5aa877048827cb61a62b0743
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Patron: {fileID: 332526131794881531, guid: 67e7b61cfb6fb754f94a3ce6aacb2279, type: 3}
+  - Item: {instanceID: 0}
+  - EventOnFire: {instanceID: 0}
+  - AudioFire: {instanceID: 0}
+  - AudioReload: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

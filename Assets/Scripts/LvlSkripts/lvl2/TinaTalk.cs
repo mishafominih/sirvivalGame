@@ -7,6 +7,7 @@ public class TinaTalk : MonoBehaviour
 {
     AudioClip Talk;
     Timer timer;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class TinaTalk : MonoBehaviour
     {
         if(GetComponent<Talk>().audios.Count == 0 && timer.Check())
         {
-            
+            player.transform.position = new Vector3(178, 35, -40);
             SceneManager.LoadScene(3);
         }
     }
@@ -27,6 +28,7 @@ public class TinaTalk : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            player = other.gameObject;
             GetComponent<Talk>().StartTalk();
             other.gameObject.GetComponent<Tasks>().SetTask("");
             GetComponent<WomanLogic>().fear = false;
